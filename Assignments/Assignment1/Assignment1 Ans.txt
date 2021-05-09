@@ -1,0 +1,48 @@
+1.)	select name,id,email
+	from player
+	where Player.name=player.id=player.email and player.PlayPos='middle';
+
+2.)	select Year,TotalPoints
+	from stats
+	where playerID='102';
+
+3.)	select distinct Name,PhoneNumber
+	from manager
+	where manager.id='202';
+
+4.)	select player.Name
+	from player inner join play on player.ID=play.PlayerID inner join game on 			game.GameID=play.GameID
+	where game.Result="lose" and game.PlayingVenue="PanAm";
+
+
+5.)	select *
+	from player, takeexam
+	where player.ID=takeexam.PlayerID;
+
+
+6.)	select date,PlayingVenue,Result
+	from game
+	where game.GameID='20101,20105';
+
+7.)	select g.Date,g.PlayingVenue,g.Result
+	from player p,game g, play pl 
+	where p.ID=pl.PlayerID and pl.GameID=g.GameID and p.Name="yoyo" and  g.Date BETWEEN 		"2016/01/01" AND "2017/12/31";
+
+
+
+8.)	select player.Name, player.ID
+	from player,stats
+	where player.ID=stats.PlayerID and stats.TotalPoints < (select avg				(stats.TotalPoints) from stats);
+
+
+
+9.)	select p1.Name , p2.Name,p1.PlayPos
+	from player p1, player p2
+	where p1.PlayPos=p2.PlayPos and p1.ID != p2.ID;
+
+
+10.)	select SUM(TotalPoints)
+	from stats
+	where stats.Year='2012';
+		
+
