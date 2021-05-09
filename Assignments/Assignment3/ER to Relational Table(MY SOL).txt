@@ -1,0 +1,44 @@
+CREATE TABLE Shop (
+  SID integer,
+  Name varchar,
+  Address varchar,
+  Ph.No char
+);
+
+CREATE TABLE Mechanic (
+  MID integer,
+  First Name varchar,
+  Last Name varchar,
+  Address varchar,
+  E-Mail varchar,
+  Ph.No char,
+  Birth Date date,
+  Speciality varchar
+);
+
+CREATE TABLE Customer (
+  CID integer,
+  First Name varchar,
+  Last Name varchar,
+  Address varchar,
+  E-Mail varchar,
+  Ph.No char
+);
+
+CREATE TABLE Car (
+  VIN integer,
+  Make varchar,
+  Model varchar,
+  Color varchar,
+  Year year
+);
+
+CREATE TABLE Service (
+  SVID integer,
+  Cost integer,
+  Time time,
+  Date date,
+  Description varchar,
+  Parts varchar
+);
+

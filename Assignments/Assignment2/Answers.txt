@@ -1,0 +1,31 @@
+Q2.)
+
+	1.)SELECT title from borrowed,books,members WHERE borrowed.isbn = books.isbn 
+	   and borrowed.memb_no = members.memb_no 
+	   AND members.name = "Sam";
+					(OR)
+	   SELECT title from borrowed JOIN books on borrowed.isbn = books.isbn 
+	   JOIN members ON borrowed.memb_no = members.memb_no 
+	   WHERE members.name = "Sam";
+	
+	2.)SELECT * from members WHERE members.name NOT LIKE "a%";
+
+	3.)SELECT members.memb_no,COUNT(members.memb_no) from borrowed,books,members 
+	   WHERE  borrowed.isbn = books.isbn 
+	   and borrowed.memb_no = members.memb_no 
+	   AND members.name = "Sam";
+					 (OR)
+	   SELECT members.memb_no,COUNT(members.memb_no) from borrowed 
+	   JOIN books on borrowed.isbn = books.isbn 
+	   JOIN members ON borrowed.memb_no = members.memb_no 
+	   WHERE members.name = "Sam";
+
+	4.)SELECT * from members WHERE members.name LIKE "%m%";
+
+	5.)SELECT publisher from borrowed,books,members WHERE borrowed.isbn = books.isbn 
+	   and borrowed.memb_no = members.memb_no 
+	   AND members.name = "Kim";
+					 (OR)
+	   SELECT publisher from borrowed JOIN books on borrowed.isbn = books.isbn 
+	   JOIN members ON borrowed.memb_no = members.memb_no 
+	   WHERE members.name = "Kim";
